@@ -9,7 +9,7 @@ BOTT = '1965629218:AAGZBOEik3tClqKhqD__vZ3SDLL3-h47M7w'
 bot = TelegramClient('bot', APP_ID, API_HASH).start(bot_token = BOTT)
 
 def startt (qq):
-    url = "https://api.telegram.org/bot" + BOTT = "/sendphoto"
+    url = "https://api.telegram.org/bot"+BOTT+"/sendphoto"
     data = {
         "chat_id" : str (qq)
         "photo" : "http://newscenter.lk/wp-content/uploads/2020/11/UPDATE_a-700x394-2.jpg"
