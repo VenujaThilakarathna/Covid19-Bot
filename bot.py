@@ -6,29 +6,44 @@ APP_ID =2744783
 API_HASH = '43857ea58ef2678d91e035db7825d54b'
 BOTT = '1965629218:AAGZBOEik3tClqKhqD__vZ3SDLL3-h47M7w'
 
-bot = TelegramClient('bot', APP_ID, API_HASH).start(bot_token = BOTT)
+from telethon import TelegramClient, events
+import json
+import requests
 
-def startt (qq):
-    url = "https://api.telegram.org/bot"+BOTT+"/sendphoto"
-    data = {
-        "chat_id" : str (qq),
-        "photo" : "http://newscenter.lk/wp-content/uploads/2020/11/UPDATE_a-700x394-2.jpg",
-        "caption" : "ශ්‍රී ලංකාවේ කොරෝනා තතු එසැනින් දැනගන්න. @UBCoronaBot Group එකට Add කරගත් පසු ස්වයංක්‍රියව නවතම කොරෝනා තතු ලබාගත හැක. \n වැඩි විස්තර සදහා /help භාවිතා කරන්න.",
-        "parse_mode" : "HTML",
-        "reply_markup" : {
-            "inline_keyboard":[
+APP_ID=3964155 #my.telegram.org
+APP_HASH='95136f46ae1425c4272596ce27543e99' #my.telegram.org
+BOTT=''#@botfather
+
+bot = TelegramClient('bot', APP_ID, APP_HASH).start(bot_token=BOTT)
+
+
+
+def staat(qq):
+  url = "https://api.telegram.org/bot"+BOTT+"/sendphoto"
+  data = {
+    "chat_id": str(qq),
+    "photo": "https://telegra.ph/file/ece9c5aedd5d44a04c184.jpg",
+    "caption": "ශ්‍රී ලංකාවේ කොරෝනා තතු එසැනින් දැනගන්න. @UBCoronaBot Group එකට Add කරගත් පසු ස්වයංක්‍රියව නවතම කොරෝනා තතු ලබාගත හැක.  වැඩි විස්තර සදහා /help භාවිතා කරන්න.     ~ @Uvindu_Bro 🇱🇰 | @charindith ",
+    "parse_mode": "HTML",
+    "reply_markup": {
+        "inline_keyboard": [
+            [
                 {
-                    "text" : "Updates Channel",
-                    "URL" : "https://t.me/UvinduBro"
+                    "text": "➕ Add me to your Group",
+                    "url": "https://t.me/UBCoronaBot?startgroup=new"
+                }, 
+                {
+                    "text": "🔊 Channel",
+                    "url": "https://t.me/UvinduBro"
                 }
             ]
-        }
+        ]
     }
-
-headers = {'Content-type': 'application/json'}
+}
+  headers = {'Content-type': 'application/json'}
   r = requests.post(url, data=json.dumps(data), headers=headers)
 
-def stats():
+def staa():
     r = requests.get('https://hpb.health.gov.lk/api/get-current-statistical')
     jsondata = json.loads(r.text)
     update_date_time    = str(jsondata['data']['update_date_time'])
@@ -70,20 +85,26 @@ def stats():
 
 
 
-@bot.on(events.NewMessage(pattern="/start"))
+@bot.on(events.NewMessage(pattern='/start'))
 async def start(event):
-    startt (event.original_update.message.peer_id.user_id)
+    staat(event.original_update.message.peer_id.user_id)
     raise events.StopPropagation
 
-@bot.on(events.NewMessage(pattern='/covid'))
-async def stats(event):
-     await event.respond(stats(), parse_mode='HTML')
-     raise events.StopPropagation
 
+@bot.on(events.NewMessage(pattern='/corona'))
+async def corona(event):
+    await event.respond(staa(),parse_mode='html')
+    raise events.StopPropagation
+
+
+@bot.on(events.NewMessage(pattern='/help'))
+async def help(event):
+    await event.respond('නවතම කොරෝනා ප්‍රවෘත්ති බැලීමට /corona command භාවිතා කරන්න')
+    raise events.StopPropagation
 
 def main():
-    """Started"""
-    bot.run_until_disconected()
+    """Start the bot."""
+    bot.run_until_disconnected()
 
 if __name__ == '__main__':
     main()
