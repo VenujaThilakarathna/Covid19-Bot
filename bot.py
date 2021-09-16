@@ -11,10 +11,10 @@ bot = TelegramClient('bot', APP_ID, API_HASH).start(bot_token = BOTT)
 def startt (qq):
     url = "https://api.telegram.org/bot"+BOTT+"/sendphoto"
     data = {
-        "chat_id" : str (qq)
-        "photo" : "http://newscenter.lk/wp-content/uploads/2020/11/UPDATE_a-700x394-2.jpg"
-        "caption" : "ශ්‍රී ලංකාවේ කොරෝනා තතු එසැනින් දැනගන්න. @UBCoronaBot Group එකට Add කරගත් පසු ස්වයංක්‍රියව නවතම කොරෝනා තතු ලබාගත හැක. \n වැඩි විස්තර සදහා /help භාවිතා කරන්න."
-        "parse_mode" : HTML
+        "chat_id" : str (qq),
+        "photo" : "http://newscenter.lk/wp-content/uploads/2020/11/UPDATE_a-700x394-2.jpg",
+        "caption" : "ශ්‍රී ලංකාවේ කොරෝනා තතු එසැනින් දැනගන්න. @UBCoronaBot Group එකට Add කරගත් පසු ස්වයංක්‍රියව නවතම කොරෝනා තතු ලබාගත හැක. \n වැඩි විස්තර සදහා /help භාවිතා කරන්න.",
+        "parse_mode" : "HTML",
         "reply_markup" : {
             "inline_keyboard":[
                 {
