@@ -18,7 +18,7 @@ def startt (qq):
         "reply_markup" : {
             "inline_keyboard":[
                 {
-                    "text" : "Updates Channel"
+                    "text" : "Updates Channel",
                     "URL" : "https://t.me/UvinduBro"
                 }
             ]
