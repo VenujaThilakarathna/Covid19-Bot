@@ -6,7 +6,7 @@ APP_ID = '7395896'
 API_HASH = 'cd3998ddf318dad74d7c506731bc0abc'
 BOTT = '2044832605:AAEDpkhcbtVlMa30_WoQgr5KzblS3otixr0'
 
-bot = TelegramClient('bot', APP_ID, API_HASH).start(bot_token = BOTT)
+bot = TelegramClient('bot', 7395896, cd3998ddf318dad74d7c506731bc0abc).start(bot_token = 2044832605:AAEDpkhcbtVlMa30_WoQgr5KzblS3otixr0)
 
 def startt (qq):
     url = "https://api.telegram.org/bot" + BOTT = "/sendphoto"
