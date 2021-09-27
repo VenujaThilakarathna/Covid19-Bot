@@ -2,9 +2,9 @@ from telethon import TelegramClient, events
 import json
 import requests
 
-APP_ID =
-API_HASH = ''
-BOTT = ''
+APP_ID = '7395896'
+API_HASH = 'cd3998ddf318dad74d7c506731bc0abc'
+BOTT = '2044832605:AAEDpkhcbtVlMa30_WoQgr5KzblS3otixr0'
 
 bot = TelegramClient('bot', APP_ID, API_HASH).start(bot_token = BOTT)
 
@@ -13,13 +13,13 @@ def startt (qq):
     data = {
         "chat_id" : str (qq)
         "photo" : "http://newscenter.lk/wp-content/uploads/2020/11/UPDATE_a-700x394-2.jpg"
-        "caption" : "ශ්‍රී ලංකාවේ කොරෝනා තතු එසැනින් දැනගන්න. @UBCoronaBot Group එකට Add කරගත් පසු ස්වයංක්‍රියව නවතම කොරෝනා තතු ලබාගත හැක. \n වැඩි විස්තර සදහා /help භාවිතා කරන්න."
+        "caption" : "ශ්‍රී ලංකාවේ කොරෝනා තතු එසැනින් දැනගන්න. @VDCoronaBot Group එකට Add කරගත් පසු ස්වයංක්‍රියව නවතම කොරෝනා තතු ලබාගත හැක. \n වැඩි විස්තර සදහා /help භාවිතා කරන්න."
         "parse_mode" : HTML
         "reply_markup" : {
             "inline_keyboard":[
                 {
                     "text" : "Updates Channel"
-                    "URL" : "https://t.me/UvinduBro"
+                    "URL" : "https://t.me/Venuja_sadew"
                 }
             ]
         }
@@ -63,7 +63,7 @@ def stats ():
             global_deaths + '</code>' + '\n' + '🙂 සුවය ලැබූ සංඛ්‍යාව = ' '<code>'  +
             global_recovered + '</code>' + '\n' + '\n' + '\n' +
             '✅ සියලු තොරතුරු රජයේ සහ පිලිගත් මුලාශ්‍ර මගිනි' + '\n' +
-            '~ @UvinduBro 🇱🇰 ~')
+            '~ @VndGroup 🇱🇰 ~')
 
     return textt
 
