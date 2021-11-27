@@ -2,9 +2,9 @@ from telethon import TelegramClient, events
 import json
 import requests
 
-APP_ID=2744783
-API_HASH='43857ea58ef2678d91e035db7825d54b'
-BOTT='1965629218:AAGZBOEik3tClqKhqD__vZ3SDLL3-h47M7w'
+APP_ID=7395896
+API_HASH='cd3998ddf318dad74d7c506731bc0abc'
+BOTT='2100560638:AAHdnGU2Sfmu_iyuLCK1u_icDUFtV67xCgM'
 
 
 bot = TelegramClient('bot', APP_ID, APP_HASH).start(bot_token=BOTT)
@@ -16,18 +16,18 @@ def staat(qq):
   data = {
     "chat_id": str(qq),
     "photo": "https://telegra.ph/file/ece9c5aedd5d44a04c184.jpg",
-    "caption": "ශ්‍රී ලංකාවේ කොරෝනා තතු එසැනින් දැනගන්න. @UBCoronaBot Group එකට Add කරගත් පසු ස්වයංක්‍රියව නවතම කොරෝනා තතු ලබාගත හැක.  වැඩි විස්තර සදහා /help භාවිතා කරන්න.     ~ @Uvindu_Bro 🇱🇰 | @charindith ",
+    "caption": "ශ්‍රී ලංකාවේ කොරෝනා තතු එසැනින් දැනගන්න. @TheVndCovidbot Group එකට Add කරගත් පසු ස්වයංක්‍රියව නවතම කොරෝනා තතු ලබාගත හැක.  වැඩි විස්තර සදහා /help භාවිතා කරන්න.     ~ @Uvindu_Bro 🇱🇰 | @charindith ",
     "parse_mode": "HTML",
     "reply_markup": {
         "inline_keyboard": [
             [
                 {
                     "text": "➕ Add me to your Group",
-                    "url": "https://t.me/UBCoronaBot?startgroup=new"
+                    "url": "https://t.me/TheVndCovidbot?startgroup=new"
                 }, 
                 {
                     "text": "🔊 Channel",
-                    "url": "https://t.me/UvinduBro"
+                    "url": "https://t.me/VndBotSupport"
                 }
             ]
         ]
@@ -72,7 +72,7 @@ def staa():
                     global_deaths + '</code>' + '\n' + '🙂 සුවය ලැබූ සංඛ්‍යාව = ' '<code>'  +
                     global_recovered + '</code>' + '\n' + '\n' + '\n' +
                     '✅ සියලු තොරතුරු රජයේ සහ පිලිගත් මුලාශ්‍ර මගිනි' + '\n' +
-                    '~ @UvinduBro 🇱🇰 ~')
+                    '~ @Venuja_Sadew 🇱🇰 ~')
     return textt
 
 
