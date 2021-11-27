@@ -7,7 +7,7 @@ API_HASH='cd3998ddf318dad74d7c506731bc0abc'
 BOTT='2100560638:AAHdnGU2Sfmu_iyuLCK1u_icDUFtV67xCgM'
 
 
-bot = TelegramClient('bot', APP_ID, APP_HASH).start(bot_token=BOTT)
+bot = TelegramClient('bot', APP_ID, API_HASH).start(bot_token=BOTT)
 
 
 
